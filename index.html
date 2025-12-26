@@ -1,0 +1,87 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Tittanic Love Calculator</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <main class="container">
+    <header class="header">
+      <h1 class="brand">Tittanic Love Calculator</h1>
+      <p class="subtitle">
+        Enter two names and ages to reveal the love percentage and FLEMS result.
+      </p>
+    </header>
+
+    <section id="form" class="card">
+      <div class="form-grid">
+        <label class="field">
+          <span>Your Name</span>
+          <input id="yourName" type="text" placeholder="e.g., Muzarrif" autocomplete="name" />
+        </label>
+
+        <label class="field">
+          <span>Your Age</span>
+          <input id="yourAge" type="number" placeholder="e.g., 24" min="10" max="99" inputmode="numeric" />
+        </label>
+
+        <label class="field">
+          <span>Partner Name</span>
+          <input id="loverName" type="text" placeholder="e.g., Jazee" />
+        </label>
+
+        <label class="field">
+          <span>Partner Age</span>
+          <input id="loverAge" type="number" placeholder="e.g., 23" min="10" max="99" inputmode="numeric" />
+        </label>
+      </div>
+
+      <button id="calcBtn" class="primary-btn">Reveal Love % 💗</button>
+      <p class="tiny">We never store your data. For entertainment only.</p>
+    </section>
+
+    <section id="loading" class="card hidden" aria-live="polite">
+      <h2 class="card-title">Calculating Love…</h2>
+      <p class="subtitle" id="loadingText">Matching hearts…</p>
+      <div class="love-loader">
+        <div class="heart"></div>
+        <div class="love-percent"><span id="lovePercentNow">0</span>%</div>
+      </div>
+      <div class="love-bar">
+        <div id="loveBarFill" class="love-bar-fill"></div>
+      </div>
+    </section>
+
+    <section id="result" class="card hidden">
+      <h2 class="card-title">Your Love Result</h2>
+      <p class="pairline" id="pairLine">A ❤️ B</p>
+
+      <div class="love-big">
+        <span id="loveFinalPercent">0</span><span class="love-big-unit">%</span>
+      </div>
+
+      <div class="flems">
+        <span class="badge" id="flemsLabel">FLEMS</span>
+        <p class="flems-desc" id="flemsDesc">Friendship vibes 🤝</p>
+      </div>
+
+      <div class="result-meta">
+        <div><strong>FLEMS meanings:</strong></div>
+        <div class="flems-grid">
+          <span>F: Friend 🤝</span>
+          <span>L: Love ❤️</span>
+          <span>E: Enemy 😈</span>
+          <span>M: Marriage 💍</span>
+          <span>S: Sister 👧</span>
+        </div>
+      </div>
+
+      <button id="againBtn" class="primary-btn">Calculate Again 🔁</button>
+    </section>
+  </main>
+
+  <script src="app.js"></script>
+</body>
+</html>
